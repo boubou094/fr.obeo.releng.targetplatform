@@ -47,6 +47,7 @@ import org.eclipse.xtext.nodemodel.impl.CompositeNode
 import org.eclipse.xtext.nodemodel.util.NodeModelUtils
 import org.eclipse.xtext.validation.Check
 import org.eclipse.xtext.validation.CheckType
+import fr.obeo.releng.targetplatform.StaticString
 
 /**
  * Custom validation rules. 
@@ -104,7 +105,7 @@ class TargetPlatformValidator extends AbstractTargetPlatformValidator {
 	
 	@Check // TESTED
 	def checkAllEnvAndRequiredAreSelfExluding(Location location) {
-		location.resolveUri()
+		location.resolveComposite()
 		val options = location.options
 		if (options.contains(Option.INCLUDE_ALL_ENVIRONMENTS) && options.contains(Option.INCLUDE_REQUIRED)) {
 			doReportAllEnvAndRequiredAreSelfExluding(location, options, TargetPlatformPackage.Literals.LOCATION__OPTIONS)
@@ -146,7 +147,7 @@ class TargetPlatformValidator extends AbstractTargetPlatformValidator {
 	
 	@Check // TESTED
 	def checkNoLocationOptionIfGlobalOptions(Location location) {
-		location.resolveUri()
+		location.resolveComposite()
 		if (!location.options.empty && !location.targetPlatform.options.empty) {
 			val nodes = NodeModelUtils::findNodesForFeature(location, TargetPlatformPackage.Literals.LOCATION__OPTIONS)
 			val withKeyword = (nodes.head as CompositeNode).previousSibling
@@ -183,7 +184,7 @@ class TargetPlatformValidator extends AbstractTargetPlatformValidator {
 	
 	@Check // TESTED
 	def deprecateOptionsOnLocation(Location location) {
-		location.resolveUri()
+		location.resolveComposite()
 		val targetPlatform = location.targetPlatform
 		
 		if (targetPlatform.options.empty && !location.options.empty) {
@@ -197,12 +198,12 @@ class TargetPlatformValidator extends AbstractTargetPlatformValidator {
 	
 	@Check // TESTED
 	def deprecateIUVersionRangeWihString(IU iu) {
+		iu.resolveVersion
 		if (iu.version != null) {
-			val nodes = NodeModelUtils::findNodesForFeature(iu, TargetPlatformPackage.Literals.IU__VERSION)
-			if ("STRING".equals((nodes.head.grammarElement as RuleCall).rule.name)) {
+			if (iu.definableVersion instanceof StaticString) {
 				warning("Usage of strings is deprecated for version range. You should remove the quotes.",
 					iu, 
-					TargetPlatformPackage.Literals.IU__VERSION,
+					TargetPlatformPackage.Literals.IU__DEFINABLE_VERSION,
 					DEPRECATE__STRINGS_ON_IU_VERSION)
 			}
 		}
@@ -319,7 +320,7 @@ class TargetPlatformValidator extends AbstractTargetPlatformValidator {
 	
 	@Check(value=CheckType.EXPENSIVE)
 	def checkLocationURI(Location location) {
-		location.resolveUri()
+		location.resolveComposite()
 		val monitor = 
 			if (context != null && context.get(typeof(IProgressMonitor)) != null) {
 				context.get(typeof(IProgressMonitor)) as IProgressMonitor

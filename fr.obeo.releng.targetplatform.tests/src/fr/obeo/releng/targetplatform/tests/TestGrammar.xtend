@@ -24,6 +24,7 @@ import static org.junit.Assert.*
 import fr.obeo.releng.targetplatform.Environment
 import org.eclipse.jdt.launching.JavaRuntime
 import java.util.Locale
+import fr.obeo.releng.targetplatform.util.LocationIndexBuilder
 
 @InjectWith(typeof(TargetPlatformInjectorProvider))
 @RunWith(typeof(XtextRunner))
@@ -31,6 +32,9 @@ class TestGrammar {
 	
 	@Inject
 	ParseHelper<TargetPlatform> parser
+	
+	@Inject
+	LocationIndexBuilder indexBuilder
 	
 	@Test
 	def testEmpty() {
@@ -59,7 +63,7 @@ class TestGrammar {
 		''')
 		assertTrue(targetPlatform.eResource.errors.join("\n"), targetPlatform.eResource.errors.empty)
 		val fisrtLocation = targetPlatform.locations.head
-		fisrtLocation.resolveUri
+		fisrtLocation.resolveComposite
 		assertEquals("https://hudson.eclipse.org/hudson/view/Modeling/job/emf-core-head/lastSuccessfulBuild/artifact/EMF.p2.repository/", fisrtLocation.uri)
 		assertEquals(2, fisrtLocation.ius.size)
 		val iu0 = fisrtLocation.ius.head
@@ -71,7 +75,7 @@ class TestGrammar {
 		assertEquals("10.0.1", iu1.version)
 		
 		val lastLocation = targetPlatform.locations.last
-		lastLocation.resolveUri
+		lastLocation.resolveComposite
 		assertEquals("https://hudson.eclipse.org/hudson/view/Modeling/job/mdt-uml2-master/lastSuccessfulBuild/artifact/UML2.p2.repository/", lastLocation.uri)
 		assertEquals(1, lastLocation.ius.size)
 		val uml2iu = lastLocation.ius.head
@@ -147,6 +151,7 @@ class TestGrammar {
 		''')
 		assertTrue(targetPlatform.eResource.errors.join("\n"), targetPlatform.eResource.errors.empty)
 		val fisrtLocation = targetPlatform.locations.head
+		fisrtLocation.resolveComposite
 		val iu0 = fisrtLocation.ius.head
 		assertEquals("my.iu", iu0.ID)
 		assertEquals("3.0.0", iu0.version)
@@ -163,6 +168,7 @@ class TestGrammar {
 		''')
 		assertTrue(targetPlatform.eResource.errors.join("\n"), targetPlatform.eResource.errors.empty)
 		val fisrtLocation = targetPlatform.locations.head
+		fisrtLocation.resolveComposite
 		val iu0 = fisrtLocation.ius.head
 		assertEquals("myu", iu0.ID)
 		assertEquals("3.2.1", iu0.version)
@@ -179,6 +185,7 @@ class TestGrammar {
 		''')
 		assertTrue(targetPlatform.eResource.errors.join("\n"), targetPlatform.eResource.errors.empty)
 		val fisrtLocation = targetPlatform.locations.head
+		fisrtLocation.resolveComposite
 		val iu0 = fisrtLocation.ius.head
 		assertEquals("myu", iu0.ID)
 		assertEquals("[3.2.1,10.0.0)", iu0.version)
@@ -195,6 +202,7 @@ class TestGrammar {
 		''')
 		assertTrue(targetPlatform.eResource.errors.join("\n"), targetPlatform.eResource.errors.empty)
 		val fisrtLocation = targetPlatform.locations.head
+		fisrtLocation.resolveComposite
 		val iu0 = fisrtLocation.ius.head
 		assertEquals("myu", iu0.ID)
 		assertEquals("[3.0.0,5.0.0)", iu0.version)
@@ -211,6 +219,7 @@ class TestGrammar {
 		''')
 		assertTrue(targetPlatform.eResource.errors.join("\n"), targetPlatform.eResource.errors.empty)
 		val fisrtLocation = targetPlatform.locations.head
+		fisrtLocation.resolveComposite
 		val iu0 = fisrtLocation.ius.head
 		assertEquals("myu", iu0.ID)
 		assertEquals("1.2.3.201404071200", iu0.version)
@@ -345,6 +354,8 @@ class TestGrammar {
 			}
 		''')
 		
+		indexBuilder.resolveCompositeElements(targetPlatform)
+		
 		assertTrue(targetPlatform.eResource.errors.join("\n"), targetPlatform.eResource.errors.empty)
 		val ids = targetPlatform.locations.map[ius.map[ID]].flatten
 		val versions = targetPlatform.locations.map[ius.map[version]].flatten
@@ -361,6 +372,8 @@ class TestGrammar {
 				com.google.guava [1.2.0 , 2.4.54)
 			}
 		''')
+		
+		indexBuilder.resolveCompositeElements(targetPlatform)
 		
 		assertTrue(targetPlatform.eResource.errors.join("\n"), targetPlatform.eResource.errors.empty)
 		val ids = targetPlatform.locations.map[ius.map[ID]].flatten
@@ -380,6 +393,8 @@ class TestGrammar {
 			}
 		''')
 		
+		indexBuilder.resolveCompositeElements(targetPlatform)
+		
 		assertTrue(targetPlatform.eResource.errors.join("\n"), targetPlatform.eResource.errors.empty)
 		val ids = targetPlatform.locations.map[ius.map[ID]].flatten
 		val versions = targetPlatform.locations.map[ius.map[version]].flatten
@@ -398,6 +413,8 @@ class TestGrammar {
 				org.apacahe.commons
 			}
 		''')
+		
+		indexBuilder.resolveCompositeElements(targetPlatform)
 		
 		assertTrue(targetPlatform.eResource.errors.join("\n"), targetPlatform.eResource.errors.empty)
 		val ids = targetPlatform.locations.map[ius.map[ID]].flatten

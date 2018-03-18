@@ -51,15 +51,9 @@ class TargetPlatformFormatter extends AbstractDeclarativeFormatter {
 		c.setLinewrap(1, 1, 2).after(targetPlatformAccess.contentsAssignment_2)
 		
 		c.setLinewrap.before(IUAccess.IDAssignment_0)
-		c.setNoLinewrap.before(IUAccess.versionAssignment_1_1_0)
-		c.setNoLinewrap.before(IUAccess.versionAssignment_1_1_1)
+		c.setNoLinewrap.before(IUAccess.definableVersionAssignment_1_1)
 		c.setNoSpace.around(IUAccess.semicolonKeyword_1_0_0)
 		c.setNoSpace.around(IUAccess.equalsSignKeyword_1_0_2)
-		
-		c.setNoSpace.around(versionRangeAccess.leftParenthesisKeyword_0_0_0)
-		c.setNoSpace.around(versionRangeAccess.leftSquareBracketKeyword_0_0_1)
-		c.setNoSpace.around(versionRangeAccess.rightParenthesisKeyword_0_4_0)
-		c.setNoSpace.around(versionRangeAccess.rightSquareBracketKeyword_0_4_1)
 		
 		// It's usually a good idea to activate the following three statements.
 		// They will add and preserve newlines around comments

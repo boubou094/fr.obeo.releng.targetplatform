@@ -56,7 +56,7 @@ class LocationIndexBuilder {
 	
 	private def void resolveLocations(TargetPlatform targetPlatform) {
 		targetPlatform.locations.forEach[
-			it.resolveUri
+			it.resolveComposite
 		]
 		targetPlatform.compositeElementsResolved = true
 	}

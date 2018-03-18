@@ -63,15 +63,19 @@ enum Option:
 ;
 
 IU:
-	ID=ID ( (';' 'version' '=')? (version=VersionRange|version=STRING) )? 
+	ID=ID ( (';' 'version' '=')? (definableVersion=DefinableVersion) )? 
 ;
 
-Version hidden():
-	INT ('.' INT ('.' INT ('.' (ID|INT|QUALIFIER))?)?)?
+DefinableVersion:
+	VersionRange | StaticString | VarCall
 ;
+
+terminal VERSION: INT ('.' INT ('.' INT ('.' (ID|INT|QUALIFIER))?)?)?;
+terminal VRANGE: ('('|'[') VERSION ',' VERSION (')'|']');
 
 VersionRange hidden (WS):
-	( ('('|'[') Version ',' Version (')'|']') ) | Version | 'lazy'
+	{VersionRange}
+	range=(VRANGE | VERSION | 'lazy')
 ;
 
 terminal INT returns ecore::EInt: ('0'..'9')+;

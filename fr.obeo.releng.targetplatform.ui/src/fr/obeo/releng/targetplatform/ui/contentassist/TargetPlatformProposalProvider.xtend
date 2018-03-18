@@ -290,7 +290,7 @@ class TargetPlatformProposalProvider extends AbstractTargetPlatformProposalProvi
 				''
 		if (text.contains("\n") || context.currentNode.text.length < currentNodeSizeToCursor) {
 			val location = model as Location
-			location.resolveUri
+			location.resolveComposite
 			val uri = location.uri
 			val window = TargetPlatformActivator.getInstance.workbench.activeWorkbenchWindow
 			val IRunnableWithProgress op = [monitor|
@@ -312,7 +312,7 @@ class TargetPlatformProposalProvider extends AbstractTargetPlatformProposalProvi
 		}
 	}
 	
-	override completeIU_Version(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+	override completeIU_DefinableVersion(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		val docText = context.viewer.document.get
 		val offset = context.offset
 		
@@ -339,7 +339,7 @@ class TargetPlatformProposalProvider extends AbstractTargetPlatformProposalProvi
 		if (!text.contains("\n") || context.currentNode.text.length < currentNodeSizeToCursor) {
 			val iu = model as IU
 			val location = iu.location
-			location.resolveUri
+			location.resolveComposite
 			val uri = location.uri
 			val window = TargetPlatformActivator.getInstance.workbench.activeWorkbenchWindow
 			val op = versionProposalRunnable(uri, iu, prefix, window.shell.display, context, acceptor)

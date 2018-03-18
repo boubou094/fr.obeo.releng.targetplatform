@@ -142,19 +142,27 @@ interface CompositeStringPart {
 	op String getActualString()
 }
 
-class VarCall extends CompositeStringPart {
+class VarCall extends CompositeStringPart, DefinableVersion {
 	refers VarDefinition varName
 
 	op String getActualString() {
 		return varName.value
 	}
+	
+	op String getActualVersion() {
+		return getActualString
+	}
 }
 
-class StaticString extends CompositeStringPart {
+class StaticString extends CompositeStringPart, DefinableVersion {
 	String value
 	
 	op String getActualString() {
 		return value
+	}
+	
+	op String getActualVersion() {
+		return getActualString
 	}
 }
 
@@ -167,6 +175,13 @@ class Location extends TargetContent {
 	contains CompositeString compositeUri
 	Option[] options
 	contains IU[] ius opposite location
+	
+	op void resolveComposite() {
+		resolveUri
+		for (iu : ius) {
+			iu.resolveVersion
+		}
+	}
 	
 	op void resolveUri() {
 		if (uri !== null) {
@@ -187,10 +202,33 @@ class IncludeDeclaration extends TargetContent {
 	}
 }
 
+interface DefinableVersion {
+	op String getActualVersion()
+}
+
 class IU {
 	String ID
 	String version
+	contains DefinableVersion definableVersion
 	container Location location opposite ius
+	
+	op void resolveVersion() {
+		if (version !== null) {
+			return
+		}
+		if (definableVersion !== null) {
+			version = definableVersion.actualVersion
+		}
+	}
+}
+
+class VersionRange extends DefinableVersion {
+	String name = "version range"
+	String range
+	
+	op String getActualVersion() {
+		return range
+	}
 }
 
 enum Option {
