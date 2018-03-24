@@ -218,6 +218,40 @@ class IU {
 		}
 		if (definableVersion !== null) {
 			version = definableVersion.actualVersion
+			if (version.contains(",")) {
+				val splitStr = version.split(",")
+				var startVer = splitStr.get(0)
+				val splitStr2 = startVer.split("\\.")
+				if (splitStr2.length < 3) {
+					startVer = startVer.trim + ".0"
+					if (splitStr2.length < 2) {
+						startVer = startVer.trim + ".0"
+					}
+				}
+				
+				var endVer = splitStr.get(1)
+				val lastChar = endVer.substring(endVer.length-1, endVer.length).trim
+				endVer = endVer.substring(0, endVer.length-1)
+				val splitStr3 = endVer.split("\\.")
+				if (splitStr3.length < 3) {
+					endVer = endVer.trim + ".0"
+					if (splitStr3.length < 2) {
+						endVer = endVer.trim + ".0"
+					}
+				}
+				
+				version = startVer + "," + endVer + lastChar
+				version = version.replaceAll(" ", "");
+			}
+			else {
+				val splitStr = version.split("\\.")
+				if (splitStr.length < 3) {
+					version = version.trim + ".0"
+					if (splitStr.length < 2) {
+						version = version.trim + ".0"
+					}
+				}
+			}
 		}
 	}
 }

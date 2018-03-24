@@ -71,7 +71,7 @@ DefinableVersion:
 ;
 
 terminal VERSION: INT ('.' INT ('.' INT ('.' (ID|INT|QUALIFIER))?)?)?;
-terminal VRANGE: ('('|'[') VERSION ',' VERSION (')'|']');
+terminal VRANGE: ('('|'[') (' '*) VERSION (' '*) ',' (' '*) VERSION (' '*) (')'|']');
 
 VersionRange hidden (WS):
 	{VersionRange}
