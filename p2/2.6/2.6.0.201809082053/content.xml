@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.2.0'?>
+<repository name='Target Platform Definition DSL and Generator' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1536440073899'/>
+    <property name='p2.compressed' value='true'/>
+  </properties>
+  <units size='7'>
+    <unit id='201809082053.releng' version='1.0.0.47A-cDJULh7735I3K3I73C9'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Releng Tools'/>
+        <property name='org.eclipse.equinox.p2.description' value='Release Engineering tools from'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='201809082053.releng' version='1.0.0.47A-cDJULh7735I3K3I73C9'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.releng.targetplatform-feature.feature.group' range='[2.6.0.201809082053,2.6.0.201809082053]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='fr.obeo.releng.targetplatform-feature.feature.jar' version='2.6.0.201809082053'>
+      <properties size='12'>
+        <property name='org.eclipse.equinox.p2.name' value='%featureName'/>
+        <property name='org.eclipse.equinox.p2.description' value='%description'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.update.feature.plugin' value='fr.obeo.releng.targetplatform'/>
+        <property name='df_LT.license' value='Eclipse Foundation Software User Agreement&#xA;February 1, 2011&#xA;&#xA;Usage Of Content&#xA;&#xA;THE ECLIPSE FOUNDATION MAKES AVAILABLE SOFTWARE, DOCUMENTATION, INFORMATION AND/OR&#xA;OTHER MATERIALS FOR OPEN SOURCE PROJECTS (COLLECTIVELY &quot;CONTENT&quot;).&#xA;USE OF THE CONTENT IS GOVERNED BY THE TERMS AND CONDITIONS OF THIS&#xA;AGREEMENT AND/OR THE TERMS AND CONDITIONS OF LICENSE AGREEMENTS OR&#xA;NOTICES INDICATED OR REFERENCED BELOW.  BY USING THE CONTENT, YOU&#xA;AGREE THAT YOUR USE OF THE CONTENT IS GOVERNED BY THIS AGREEMENT&#xA;AND/OR THE TERMS AND CONDITIONS OF ANY APPLICABLE LICENSE AGREEMENTS&#xA;OR NOTICES INDICATED OR REFERENCED BELOW.  IF YOU DO NOT AGREE TO THE&#xA;TERMS AND CONDITIONS OF THIS AGREEMENT AND THE TERMS AND CONDITIONS&#xA;OF ANY APPLICABLE LICENSE AGREEMENTS OR NOTICES INDICATED OR REFERENCED&#xA;BELOW, THEN YOU MAY NOT USE THE CONTENT.&#xA;&#xA;Applicable Licenses&#xA;&#xA;Unless otherwise indicated, all Content made available by the&#xA;Eclipse Foundation is provided to you under the terms and conditions of&#xA;the Eclipse Public License Version 1.0 (&quot;EPL&quot;). A copy of the EPL is&#xA;provided with this Content and is also available at http://www.eclipse.org/legal/epl-v10.html.&#xA;For purposes of the EPL, &quot;Program&quot; will mean the Content.&#xA;&#xA;Content includes, but is not limited to, source code, object code,&#xA;documentation and other files maintained in the Eclipse Foundation source code&#xA;repository (&quot;Repository&quot;) in software modules (&quot;Modules&quot;) and made available&#xA;as downloadable archives (&quot;Downloads&quot;).&#xA;&#xA;- Content may be structured and packaged into modules to facilitate delivering,&#xA;extending, and upgrading the Content. Typical modules may include plug-ins (&quot;Plug-ins&quot;),&#xA;plug-in fragments (&quot;Fragments&quot;), and features (&quot;Features&quot;).&#xA;- Each Plug-in or Fragment may be packaged as a sub-directory or JAR (Java(TM) ARchive)&#xA;in a directory named &quot;plugins&quot;.&#xA;- A Feature is a bundle of one or more Plug-ins and/or Fragments and associated material.&#xA;Each Feature may be packaged as a sub-directory in a directory named &quot;features&quot;.&#xA;Within a Feature, files named &quot;feature.xml&quot; may contain a list of the names and version&#xA;numbers of the Plug-ins and/or Fragments associated with that Feature.&#xA;- Features may also include other Features (&quot;Included Features&quot;). Within a Feature, files&#xA;named &quot;feature.xml&quot; may contain a list of the names and version numbers of Included Features.&#xA;&#xA;The terms and conditions governing Plug-ins and Fragments should be&#xA;contained in files named &quot;about.html&quot; (&quot;Abouts&quot;). The terms and&#xA;conditions governing Features and Included Features should be contained&#xA;in files named &quot;license.html&quot; (&quot;Feature Licenses&quot;). Abouts and Feature&#xA;Licenses may be located in any directory of a Download or Module&#xA;including, but not limited to the following locations:&#xA;&#xA;- The top-level (root) directory&#xA;- Plug-in and Fragment directories&#xA;- Inside Plug-ins and Fragments packaged as JARs&#xA;- Sub-directories of the directory named &quot;src&quot; of certain Plug-ins&#xA;- Feature directories&#xA;&#xA;Note: if a Feature made available by the Eclipse Foundation is installed using the&#xA;Provisioning Technology (as defined below), you must agree to a license (&quot;Feature &#xA;Update License&quot;) during the installation process. If the Feature contains&#xA;Included Features, the Feature Update License should either provide you&#xA;with the terms and conditions governing the Included Features or inform&#xA;you where you can locate them. Feature Update Licenses may be found in&#xA;the &quot;license&quot; property of files named &quot;feature.properties&quot; found within a Feature.&#xA;Such Abouts, Feature Licenses, and Feature Update Licenses contain the&#xA;terms and conditions (or references to such terms and conditions) that&#xA;govern your use of the associated Content in that directory.&#xA;&#xA;THE ABOUTS, FEATURE LICENSES, AND FEATURE UPDATE LICENSES MAY REFER&#xA;TO THE EPL OR OTHER LICENSE AGREEMENTS, NOTICES OR TERMS AND CONDITIONS.&#xA;SOME OF THESE OTHER LICENSE AGREEMENTS MAY INCLUDE (BUT ARE NOT LIMITED TO):&#xA;&#xA;- Eclipse Distribution License Version 1.0 (available at http://www.eclipse.org/licenses/edl-v1.0.html)&#xA;- Common Public License Version 1.0 (available at http://www.eclipse.org/legal/cpl-v10.html)&#xA;- Apache Software License 1.1 (available at http://www.apache.org/licenses/LICENSE)&#xA;- Apache Software License 2.0 (available at http://www.apache.org/licenses/LICENSE-2.0)&#xA;- Metro Link Public License 1.00 (available at http://www.opengroup.org/openmotif/supporters/metrolink/license.html)&#xA;- Mozilla Public License Version 1.1 (available at http://www.mozilla.org/MPL/MPL-1.1.html)&#xA;&#xA;IT IS YOUR OBLIGATION TO READ AND ACCEPT ALL SUCH TERMS AND CONDITIONS PRIOR&#xA;TO USE OF THE CONTENT. If no About, Feature License, or Feature Update License&#xA;is provided, please contact the Eclipse Foundation to determine what terms and conditions&#xA;govern that particular Content.&#xA;&#xA;&#xA;Use of Provisioning Technology&#xA;&#xA;The Eclipse Foundation makes available provisioning software, examples of which include,&#xA;but are not limited to, p2 and the Eclipse Update Manager (&quot;Provisioning Technology&quot;) for&#xA;the purpose of allowing users to install software, documentation, information and/or&#xA;other materials (collectively &quot;Installable Software&quot;). This capability is provided with&#xA;the intent of allowing such users to install, extend and update Eclipse-based products.&#xA;Information about packaging Installable Software is available at&#xA;http://eclipse.org/equinox/p2/repository_packaging.html (&quot;Specification&quot;).&#xA;&#xA;You may use Provisioning Technology to allow other parties to install Installable Software.&#xA;You shall be responsible for enabling the applicable license agreements relating to the&#xA;Installable Software to be presented to, and accepted by, the users of the Provisioning Technology&#xA;in accordance with the Specification. By using Provisioning Technology in such a manner and&#xA;making it available in accordance with the Specification, you further acknowledge your&#xA;agreement to, and the acquisition of all necessary rights to permit the following:&#xA;&#xA;1. A series of actions may occur (&quot;Provisioning Process&quot;) in which a user may execute&#xA;the Provisioning Technology on a machine (&quot;Target Machine&quot;) with the intent of installing,&#xA;extending or updating the functionality of an Eclipse-based product.&#xA;2. During the Provisioning Process, the Provisioning Technology may cause third party&#xA;Installable Software or a portion thereof to be accessed and copied to the Target Machine.&#xA;3. Pursuant to the Specification, you will provide to the user the terms and conditions that&#xA;govern the use of the Installable Software (&quot;Installable Software Agreement&quot;) and such&#xA;Installable Software Agreement shall be accessed from the Target Machine in accordance&#xA;with the Specification. Such Installable Software Agreement must inform the user of the&#xA;terms and conditions that govern the Installable Software and must solicit acceptance by&#xA;the end user in the manner prescribed in such Installable Software Agreement. Upon such&#xA;indication of agreement by the user, the provisioning Technology will complete installation&#xA;of the Installable Software.&#xA;&#xA;Cryptography&#xA;&#xA;Content may contain encryption software. The country in which you are&#xA;currently may have restrictions on the import, possession, and use,&#xA;and/or re-export to another country, of encryption software. BEFORE&#xA;using any encryption software, please check the country&apos;s laws,&#xA;regulations and policies concerning the import, possession, or use, and&#xA;re-export of encryption software, to see if this is permitted.&#xA;&#xA;Java and all Java-based trademarks are trademarks of Oracle Corporation in the United States, other countries, or both.'/>
+        <property name='df_LT.copyright' value='Copyright (c) 2012-2014 Obeo, France. &#xA;All rights reserved. This program and the accompanying materials &#xA;are made available under the terms of the Eclipse Public License v1.0 &#xA;which accompanies this distribution, and is available at &#xA;http://www.eclipse.org/legal/epl-v10.html &#xA;&#xA;Contributors: &#xA;Mikael Barbero (Obeo) - initial API and implementation'/>
+        <property name='df_LT.featureName' value='Target Platform Definition DSL and Generator'/>
+        <property name='df_LT.description' value='Target Platform Definition DSL and Generator provides a DSL with an advanced editor and a generator taking this DSL as input and generating a .target file that PDE is able to read to provision a Target Platform.'/>
+        <property name='df_LT.providerName' value='Obeo'/>
+        <property name='maven-groupId' value='fr.obeo.releng.targetplatform'/>
+        <property name='maven-artifactId' value='fr.obeo.releng.targetplatform-feature'/>
+        <property name='maven-version' value='2.6.0-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.releng.targetplatform-feature.feature.jar' version='2.6.0.201809082053'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='fr.obeo.releng.targetplatform-feature' version='2.6.0.201809082053'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='fr.obeo.releng.targetplatform-feature' version='2.6.0.201809082053'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='%25licenseURL' url='%25licenseURL'>
+          %license
+        </license>
+      </licenses>
+      <copyright uri='%25copyrightURL' url='%25copyrightURL'>
+        %copyright
+      </copyright>
+    </unit>
+    <unit id='fr.obeo.releng.targetplatform-feature.feature.group' version='2.6.0.201809082053' singleton='false'>
+      <update id='fr.obeo.releng.targetplatform-feature.feature.group' range='[0.0.0,2.6.0.201809082053)' severity='0'/>
+      <properties size='12'>
+        <property name='org.eclipse.equinox.p2.name' value='%featureName'/>
+        <property name='org.eclipse.equinox.p2.description' value='%description'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='fr.obeo.releng.targetplatform'/>
+        <property name='maven-artifactId' value='fr.obeo.releng.targetplatform-feature'/>
+        <property name='maven-version' value='2.6.0-SNAPSHOT'/>
+        <property name='df_LT.license' value='Eclipse Foundation Software User Agreement&#xA;February 1, 2011&#xA;&#xA;Usage Of Content&#xA;&#xA;THE ECLIPSE FOUNDATION MAKES AVAILABLE SOFTWARE, DOCUMENTATION, INFORMATION AND/OR&#xA;OTHER MATERIALS FOR OPEN SOURCE PROJECTS (COLLECTIVELY &quot;CONTENT&quot;).&#xA;USE OF THE CONTENT IS GOVERNED BY THE TERMS AND CONDITIONS OF THIS&#xA;AGREEMENT AND/OR THE TERMS AND CONDITIONS OF LICENSE AGREEMENTS OR&#xA;NOTICES INDICATED OR REFERENCED BELOW.  BY USING THE CONTENT, YOU&#xA;AGREE THAT YOUR USE OF THE CONTENT IS GOVERNED BY THIS AGREEMENT&#xA;AND/OR THE TERMS AND CONDITIONS OF ANY APPLICABLE LICENSE AGREEMENTS&#xA;OR NOTICES INDICATED OR REFERENCED BELOW.  IF YOU DO NOT AGREE TO THE&#xA;TERMS AND CONDITIONS OF THIS AGREEMENT AND THE TERMS AND CONDITIONS&#xA;OF ANY APPLICABLE LICENSE AGREEMENTS OR NOTICES INDICATED OR REFERENCED&#xA;BELOW, THEN YOU MAY NOT USE THE CONTENT.&#xA;&#xA;Applicable Licenses&#xA;&#xA;Unless otherwise indicated, all Content made available by the&#xA;Eclipse Foundation is provided to you under the terms and conditions of&#xA;the Eclipse Public License Version 1.0 (&quot;EPL&quot;). A copy of the EPL is&#xA;provided with this Content and is also available at http://www.eclipse.org/legal/epl-v10.html.&#xA;For purposes of the EPL, &quot;Program&quot; will mean the Content.&#xA;&#xA;Content includes, but is not limited to, source code, object code,&#xA;documentation and other files maintained in the Eclipse Foundation source code&#xA;repository (&quot;Repository&quot;) in software modules (&quot;Modules&quot;) and made available&#xA;as downloadable archives (&quot;Downloads&quot;).&#xA;&#xA;- Content may be structured and packaged into modules to facilitate delivering,&#xA;extending, and upgrading the Content. Typical modules may include plug-ins (&quot;Plug-ins&quot;),&#xA;plug-in fragments (&quot;Fragments&quot;), and features (&quot;Features&quot;).&#xA;- Each Plug-in or Fragment may be packaged as a sub-directory or JAR (Java(TM) ARchive)&#xA;in a directory named &quot;plugins&quot;.&#xA;- A Feature is a bundle of one or more Plug-ins and/or Fragments and associated material.&#xA;Each Feature may be packaged as a sub-directory in a directory named &quot;features&quot;.&#xA;Within a Feature, files named &quot;feature.xml&quot; may contain a list of the names and version&#xA;numbers of the Plug-ins and/or Fragments associated with that Feature.&#xA;- Features may also include other Features (&quot;Included Features&quot;). Within a Feature, files&#xA;named &quot;feature.xml&quot; may contain a list of the names and version numbers of Included Features.&#xA;&#xA;The terms and conditions governing Plug-ins and Fragments should be&#xA;contained in files named &quot;about.html&quot; (&quot;Abouts&quot;). The terms and&#xA;conditions governing Features and Included Features should be contained&#xA;in files named &quot;license.html&quot; (&quot;Feature Licenses&quot;). Abouts and Feature&#xA;Licenses may be located in any directory of a Download or Module&#xA;including, but not limited to the following locations:&#xA;&#xA;- The top-level (root) directory&#xA;- Plug-in and Fragment directories&#xA;- Inside Plug-ins and Fragments packaged as JARs&#xA;- Sub-directories of the directory named &quot;src&quot; of certain Plug-ins&#xA;- Feature directories&#xA;&#xA;Note: if a Feature made available by the Eclipse Foundation is installed using the&#xA;Provisioning Technology (as defined below), you must agree to a license (&quot;Feature &#xA;Update License&quot;) during the installation process. If the Feature contains&#xA;Included Features, the Feature Update License should either provide you&#xA;with the terms and conditions governing the Included Features or inform&#xA;you where you can locate them. Feature Update Licenses may be found in&#xA;the &quot;license&quot; property of files named &quot;feature.properties&quot; found within a Feature.&#xA;Such Abouts, Feature Licenses, and Feature Update Licenses contain the&#xA;terms and conditions (or references to such terms and conditions) that&#xA;govern your use of the associated Content in that directory.&#xA;&#xA;THE ABOUTS, FEATURE LICENSES, AND FEATURE UPDATE LICENSES MAY REFER&#xA;TO THE EPL OR OTHER LICENSE AGREEMENTS, NOTICES OR TERMS AND CONDITIONS.&#xA;SOME OF THESE OTHER LICENSE AGREEMENTS MAY INCLUDE (BUT ARE NOT LIMITED TO):&#xA;&#xA;- Eclipse Distribution License Version 1.0 (available at http://www.eclipse.org/licenses/edl-v1.0.html)&#xA;- Common Public License Version 1.0 (available at http://www.eclipse.org/legal/cpl-v10.html)&#xA;- Apache Software License 1.1 (available at http://www.apache.org/licenses/LICENSE)&#xA;- Apache Software License 2.0 (available at http://www.apache.org/licenses/LICENSE-2.0)&#xA;- Metro Link Public License 1.00 (available at http://www.opengroup.org/openmotif/supporters/metrolink/license.html)&#xA;- Mozilla Public License Version 1.1 (available at http://www.mozilla.org/MPL/MPL-1.1.html)&#xA;&#xA;IT IS YOUR OBLIGATION TO READ AND ACCEPT ALL SUCH TERMS AND CONDITIONS PRIOR&#xA;TO USE OF THE CONTENT. If no About, Feature License, or Feature Update License&#xA;is provided, please contact the Eclipse Foundation to determine what terms and conditions&#xA;govern that particular Content.&#xA;&#xA;&#xA;Use of Provisioning Technology&#xA;&#xA;The Eclipse Foundation makes available provisioning software, examples of which include,&#xA;but are not limited to, p2 and the Eclipse Update Manager (&quot;Provisioning Technology&quot;) for&#xA;the purpose of allowing users to install software, documentation, information and/or&#xA;other materials (collectively &quot;Installable Software&quot;). This capability is provided with&#xA;the intent of allowing such users to install, extend and update Eclipse-based products.&#xA;Information about packaging Installable Software is available at&#xA;http://eclipse.org/equinox/p2/repository_packaging.html (&quot;Specification&quot;).&#xA;&#xA;You may use Provisioning Technology to allow other parties to install Installable Software.&#xA;You shall be responsible for enabling the applicable license agreements relating to the&#xA;Installable Software to be presented to, and accepted by, the users of the Provisioning Technology&#xA;in accordance with the Specification. By using Provisioning Technology in such a manner and&#xA;making it available in accordance with the Specification, you further acknowledge your&#xA;agreement to, and the acquisition of all necessary rights to permit the following:&#xA;&#xA;1. A series of actions may occur (&quot;Provisioning Process&quot;) in which a user may execute&#xA;the Provisioning Technology on a machine (&quot;Target Machine&quot;) with the intent of installing,&#xA;extending or updating the functionality of an Eclipse-based product.&#xA;2. During the Provisioning Process, the Provisioning Technology may cause third party&#xA;Installable Software or a portion thereof to be accessed and copied to the Target Machine.&#xA;3. Pursuant to the Specification, you will provide to the user the terms and conditions that&#xA;govern the use of the Installable Software (&quot;Installable Software Agreement&quot;) and such&#xA;Installable Software Agreement shall be accessed from the Target Machine in accordance&#xA;with the Specification. Such Installable Software Agreement must inform the user of the&#xA;terms and conditions that govern the Installable Software and must solicit acceptance by&#xA;the end user in the manner prescribed in such Installable Software Agreement. Upon such&#xA;indication of agreement by the user, the provisioning Technology will complete installation&#xA;of the Installable Software.&#xA;&#xA;Cryptography&#xA;&#xA;Content may contain encryption software. The country in which you are&#xA;currently may have restrictions on the import, possession, and use,&#xA;and/or re-export to another country, of encryption software. BEFORE&#xA;using any encryption software, please check the country&apos;s laws,&#xA;regulations and policies concerning the import, possession, or use, and&#xA;re-export of encryption software, to see if this is permitted.&#xA;&#xA;Java and all Java-based trademarks are trademarks of Oracle Corporation in the United States, other countries, or both.'/>
+        <property name='df_LT.copyright' value='Copyright (c) 2012-2014 Obeo, France. &#xA;All rights reserved. This program and the accompanying materials &#xA;are made available under the terms of the Eclipse Public License v1.0 &#xA;which accompanies this distribution, and is available at &#xA;http://www.eclipse.org/legal/epl-v10.html &#xA;&#xA;Contributors: &#xA;Mikael Barbero (Obeo) - initial API and implementation'/>
+        <property name='df_LT.featureName' value='Target Platform Definition DSL and Generator'/>
+        <property name='df_LT.description' value='Target Platform Definition DSL and Generator provides a DSL with an advanced editor and a generator taking this DSL as input and generating a .target file that PDE is able to read to provision a Target Platform.'/>
+        <property name='df_LT.providerName' value='Obeo'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.releng.targetplatform-feature.feature.group' version='2.6.0.201809082053'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.runtime.feature.group' range='2.7.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.ui.feature.group' range='2.7.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.releng.targetplatform' range='[2.6.0.201809082053,2.6.0.201809082053]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.releng.targetplatform.ui' range='[2.6.0.201809082053,2.6.0.201809082053]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.releng.targetplatform-feature.feature.jar' range='[2.6.0.201809082053,2.6.0.201809082053]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='%25licenseURL' url='%25licenseURL'>
+          %license
+        </license>
+      </licenses>
+      <copyright uri='%25copyrightURL' url='%25copyrightURL'>
+        %copyright
+      </copyright>
+    </unit>
+    <unit id='a.jre.javase' version='10.0.0' singleton='false'>
+      <provides size='252'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' version='10.0.0'/>
+        <provided namespace='java.package' name='java.applet' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.color' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.datatransfer' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.desktop' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.dnd' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.event' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.font' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.geom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.im' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.im.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.image' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.image.renderable' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.print' version='0.0.0'/>
+        <provided namespace='java.package' name='java.beans' version='0.0.0'/>
+        <provided namespace='java.package' name='java.beans.beancontext' version='0.0.0'/>
+        <provided namespace='java.package' name='java.io' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.instrument' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.invoke' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.management' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.module' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.ref' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='java.math' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net' version='0.0.0'/>
+        <provided namespace='java.package' name='java.net.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.channels' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.channels.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.charset' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.charset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.activation' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.dgc' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.registry' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.server' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.acl' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='java.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='java.text' version='0.0.0'/>
+        <provided namespace='java.package' name='java.text.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.chrono' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.format' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.temporal' version='0.0.0'/>
+        <provided namespace='java.package' name='java.time.zone' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent.atomic' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.concurrent.locks' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.function' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.jar' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.prefs' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.regex' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.zip' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.accessibility' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.activation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.activity' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation.processing' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.metadata' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.bmp' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.jpeg' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.jws' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.jws.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.element' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.type' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.loading' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.modelmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.monitor' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.openmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.relation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.timer' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.directory' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.ldap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute.standard' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.script' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.kerberos' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.x500' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.sasl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.serial' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.border' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.colorchooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.filechooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.basic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.metal' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.multi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.nimbus' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.synth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.table' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.rtf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.undo' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.annotation.adapters' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.attachment' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.keyinfo' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.datatype' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.namespace' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.parsers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.events' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stax' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.handler.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.http' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.spi.http' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.wsaddressing' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.ietf.jgss' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA_2_3' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA_2_3.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.DynAnyPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.ORBPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.TypeCodePackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming.NamingContextExtPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming.NamingContextPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.Dynamic' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny.DynAnyFactoryPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny.DynAnyPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP.CodecFactoryPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP.CodecPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.Messaging' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableInterceptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableInterceptor.ORBInitInfoPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.CurrentPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.POAManagerPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.POAPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.ServantLocatorPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.SendingContext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.stub.java.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.bootstrap' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.css' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.events' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.html' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ls' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ranges' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.stylesheets' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.traversal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.views' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.helpers' version='0.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.3.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.4.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.5.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.6.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.7.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact1' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact2' version='10.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='1.8.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='9.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE/compact3' version='10.0.0'/>
+      </provides>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+    </unit>
+    <unit id='fr.obeo.releng.targetplatform' version='2.6.0.201809082053' generation='2'>
+      <update id='fr.obeo.releng.targetplatform' range='[0.0.0,2.6.0.201809082053)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.pluginName' value='Target Platform DSL and Generator'/>
+        <property name='df_LT.providerName' value='Obeo'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='fr.obeo.releng.targetplatform'/>
+        <property name='maven-artifactId' value='fr.obeo.releng.targetplatform'/>
+        <property name='maven-version' value='2.6.0-SNAPSHOT'/>
+      </properties>
+      <provides size='19'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.releng.targetplatform' version='2.6.0.201809082053'/>
+        <provided namespace='osgi.bundle' name='fr.obeo.releng.targetplatform' version='2.6.0.201809082053'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.conversion' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.formatting' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.parser.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.parser.antlr.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.pde' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.resolved' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.scoping' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.serializer' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.services' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.util' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.validation' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='fr.obeo.releng.targetplatform' version='2.6.0.201809082053'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='29'>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.generator' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.apache.commons.logging' range='1.0.4' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.codegen.ecore' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.mwe.utils' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.mwe2.launch' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.util' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore.xcore' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore.xcore.lib' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.antlr.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.repository' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.metadata' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.google.guava' range='[10.0.0,16.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm' range='5.0.1'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.metadata.repository' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='[1.5.0,2.0.0)'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.6))'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='fr.obeo.releng.targetplatform' version='2.6.0.201809082053'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: fr.obeo.releng.targetplatform;singleton:=true&#xA;Bundle-Version: 2.6.0.201809082053
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='config.a.jre.javase' version='10.0.0' singleton='false'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='10.0.0'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='config.a.jre.javase' version='10.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='10.0.0'/>
+      </requires>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='install'>
+
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='fr.obeo.releng.targetplatform.ui' version='2.6.0.201809082053' generation='2'>
+      <update id='fr.obeo.releng.targetplatform.ui' range='[0.0.0,2.6.0.201809082053)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.pluginName' value='Target Platform DSL and Generator (UI and IDE integration)'/>
+        <property name='df_LT.providerName' value='Obeo'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='fr.obeo.releng.targetplatform'/>
+        <property name='maven-artifactId' value='fr.obeo.releng.targetplatform.ui'/>
+        <property name='maven-version' value='2.6.0-SNAPSHOT'/>
+      </properties>
+      <provides size='12'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.releng.targetplatform.ui' version='2.6.0.201809082053'/>
+        <provided namespace='osgi.bundle' name='fr.obeo.releng.targetplatform.ui' version='2.6.0.201809082053'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.ui' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.ui.contentassist' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.ui.contentassist.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.ui.contentassist.antlr.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.ui.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.ui.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.obeo.releng.targetplatform.ui.quickfix' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='fr.obeo.releng.targetplatform.ui' version='2.6.0.201809082053'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='21'>
+        <required namespace='osgi.bundle' name='fr.obeo.releng.targetplatform' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.shared' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.builder' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.antlr.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.codetemplates.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.repository' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.metadata' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.pde.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.6))'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='fr.obeo.releng.targetplatform.ui' version='2.6.0.201809082053'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: fr.obeo.releng.targetplatform.ui; singleton:=true&#xA;Bundle-Version: 2.6.0.201809082053
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>
