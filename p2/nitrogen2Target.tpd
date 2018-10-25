@@ -1,0 +1,11 @@
+target "nitrogen2Target"
+
+with source requirements
+
+define profile = "tonga"
+
+include "nitrogen2TargetVariable-" + ${profile} + ".tpd"
+ 
+location ${tongaOptOrbitRepositoryUrl} {
+     com.google.guava
+}
